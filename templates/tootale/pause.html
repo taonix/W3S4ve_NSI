@@ -1,0 +1,31 @@
+{{ header | safe }}
+
+<h1 class="title">Salle de pause de Tootale</h1>
+
+<p>
+Bienvenue dans la salle de pause de Tootale ! Un lieu qui vous parait charmant de prime abord, dans un cadre agréable, seulement, un détail vous tracasse, la fenêtre
+de la piece semble pêner à se fermer. Vous décidez donc d'aller voir de plus près.
+{% for elem in piece.content %}
+    {% if not(elem in inventaire) %}
+        {{ elem.text_to_introduce }}
+        <u class="invisible">{{ inventaire.append(elem) }}</u>
+    {% endif %}
+{% endfor %}
+</p>
+
+<div class="links">
+    <a href="/tootale_cage_escalier"> > Redescendre les escaliers < </a>
+</div>
+
+<h2>Inventaire</h2>
+<ul>
+{% for elem in inventaire %}
+    <li>
+        <h3>{{ elem.name }} :</h3>
+        <p>&nbsp;&nbsp;{{ elem.description }}</p>
+    </li>
+{% endfor %}
+</ul>
+
+{{ inventory_visual | safe }}
+{{ footer | safe }}

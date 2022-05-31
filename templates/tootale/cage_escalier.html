@@ -1,0 +1,26 @@
+{{ header | safe }}
+
+<h1 class="title">Cage d'escalier de Tootale</h1>
+
+<p>
+    Vous arrivez dans la cage d'escalier de tootale. Vous faite face à un escalier et à une porte menant au hall.
+</p>
+
+<div class="links">
+    <a href="/tootale_pause"> > Monter < </a>
+    <a href="/tootale_cave"> > Descendre < </a>
+    <a href="/tootale_hall"> > Aller au Hall < </a>
+</div>
+
+<h2>Inventaire</h2>
+<ul>
+{% for elem in inventaire %}
+    <li>
+        <h3>{{ elem.name }} :</h3>
+        <p>&nbsp;&nbsp;{{ elem.description }}</p>
+    </li>
+{% endfor %}
+</ul>
+
+{{ inventory_visual | safe }}
+{{ footer | safe }}

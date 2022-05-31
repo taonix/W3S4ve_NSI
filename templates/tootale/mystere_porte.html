@@ -1,0 +1,25 @@
+{{ header | safe }}
+
+<h1 class="title">Porte à code</h1>
+
+<p>
+    Un code vous est demandé pour ouvrir la porte.
+</p>
+
+<form action="/tootale_mystere" method="post">
+    <input type="text" name="code" placeholder="Code">
+    <button type="submit">Ouvrir la porte</button>
+</form>
+
+<h2>Inventaire</h2>
+<ul>
+{% for elem in inventaire %}
+    <li>
+        <h3>{{ elem.name }} :</h3>
+        <p>&nbsp;&nbsp;{{ elem.description }}</p>
+    </li>
+{% endfor %}
+</ul>
+
+{{ inventory_visual | safe }}
+{{ footer | safe }}

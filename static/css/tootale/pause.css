@@ -1,0 +1,17 @@
+body {
+    margin: 5%;
+}
+
+.links {
+    text-align: center;
+    margin: 5%;
+}
+
+.links a {
+    margin: 0 5%;
+}
+
+.title {
+    text-align: center;
+    margin: 5%;
+}

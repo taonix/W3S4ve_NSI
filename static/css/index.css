@@ -1,0 +1,42 @@
+.container {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+            "grid1 grid2 ."
+            "grid1 grid3 ."
+            ". . .";
+}
+
+
+.grid1 {
+    grid-area: grid1;
+}
+
+
+.grid2 {
+    grid-area: grid2;
+    background-image: url('/static/images/mission.jpg') !important;
+    background-size: cover;
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
+
+.grid3 {
+    margin: 1%;
+    grid-area: grid3;
+    text-align: center;
+}
+
+.start_button {
+    position:relative;
+    top:50%;
+    margin-top: 0;
+}
+
+.title {
+    margin: 5%;
+}

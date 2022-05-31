@@ -1,0 +1,38 @@
+{{ header | safe }}
+
+<h1 class="title">Salle de pause de Tootale</h1>
+
+<p>
+Dans la salle des serveurs, des machines, partout !
+{% for elem in piece.content %}
+    {% if not(elem in inventaire) %}
+        {{ elem.text_to_introduce }}
+        <u class="invisible">{{ inventaire.append(elem) }}</u>
+    {% endif %}
+{% endfor %}
+Sur le PC central vous trouvez un charabia incompréhensible :
+</p>
+
+<div class="PC_central">
+    <p>
+        Ex vhwx wx et ihkmx wx et vtox ihnk kxvnixkx et vexy wx vabyykxffxgm wxl whvnfxgml xlm : 4187
+    </p>
+    <p class="invi">cesar droite 7</p>
+</div>
+
+<div class="links">
+    <a href="/tootale_hall"> > Revenir au hall < </a>
+</div>
+
+<h2>Inventaire</h2>
+<ul>
+{% for elem in inventaire %}
+    <li>
+        <h3>{{ elem.name }} :</h3>
+        <p>&nbsp;&nbsp;{{ elem.description }}</p>
+    </li>
+{% endfor %}
+</ul>
+
+{{ inventory_visual | safe }}
+{{ footer | safe }}

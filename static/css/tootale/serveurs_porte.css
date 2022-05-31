@@ -1,0 +1,38 @@
+body {
+    margin: 5%;
+}
+
+.links {
+    text-align: center;
+    margin: 5%;
+}
+
+.links a {
+    margin: 0 5%;
+}
+
+.title {
+    text-align: center;
+    margin: 5%;
+}
+
+input {
+    background-color: lime;
+    color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: lime;
+    color: black;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+form {
+    margin-bottom: 5%;
+}
